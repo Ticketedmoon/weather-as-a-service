@@ -18,13 +18,20 @@ module.exports = (mode) => {
             compress: true,
             contentBase: path.join(__dirname, "dist"),
             watchContentBase: true,
-            writeToDisk: true
+            writeToDisk: true,
+            proxy: {
+                '/api/**': {
+                    target: "http://localhost:8080",
+                    secure: false
+                }
+            }
         },
         plugins: [
             new webpack.HotModuleReplacementPlugin(),
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: 'index.html',
+                favicon: 'favicon.png',
                 inject: true
             })
         ],

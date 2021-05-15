@@ -13,11 +13,6 @@ public class WeatherAPIController {
 
     private final WeatherAPIService weatherAPIService;
 
-    @GetMapping("/")
-    public String index() {
-        return "index";
-    }
-
     @GetMapping("/api/weather")
     public WeatherDTO getCurrentWeatherByCity(@RequestParam String city) {
         return weatherAPIService.getCurrentWeatherByCity(city);
