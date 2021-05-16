@@ -1,6 +1,5 @@
 export type WeatherType = {
 	cloudcover: number,
-	feelslike: number,
 	humidity: number,
 	is_day: string,
 	observation_time: string,

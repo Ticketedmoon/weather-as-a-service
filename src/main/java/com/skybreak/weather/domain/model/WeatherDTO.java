@@ -24,7 +24,6 @@ public class WeatherDTO {
         private Integer precip;
         private Integer humidity;
         private Integer cloudcover;
-        private Integer feelslike;
         private Integer uv_index;
         private Integer visibility;
         private String is_day;

@@ -12,7 +12,7 @@ const StyledDropDownSubmitContainer = styled.div`
 	display: flex;
 	gap: 1em;
 	justify-content: center;
-	height: 30%;
+	height: 20%;
 	align-items:center;
 `;
 
@@ -52,6 +52,10 @@ const StyledPageTitle = styled(StyledResultViewTitle)`
 const StyledWeatherData = styled.span`
     color: #f9e16c;
 	font-family: 'Itim', cursive;
+`;
+
+const StyledButtonContainer = styled.div`
+	text-align: center;
 `;
 
 let WEATHER_DESCRIPTION_NOT_FOUND = "No Temperature Description Found";
@@ -156,14 +160,15 @@ export const App = () => {
 					/>
 				) : undefined
 				}
-
+			</StyledDropDownSubmitContainer>
+			<StyledButtonContainer>
 				{isPropertySet(country) && isPropertySet(city) ? (
-					<Button variant={"contained"}
+					<Button variant={"outlined"}
 							color={"primary"}
 							onClick={() => getWeatherByCity(city)}> Check weather </Button>
 				) : undefined
 				}
-			</StyledDropDownSubmitContainer>
+			</StyledButtonContainer>
 			{
 				weatherData ? (
 					<StyledWeatherResultView>
@@ -178,7 +183,6 @@ export const App = () => {
 							<span> Is currently Daytime: <StyledWeatherData>{weatherData.is_day}</StyledWeatherData> </span>
 							<span> Visibility: <StyledWeatherData>{weatherData.visibility}</StyledWeatherData> </span>
 							<span> Cloud Cover: <StyledWeatherData>{weatherData.cloudcover}</StyledWeatherData> </span>
-							<span> Feels Like: <StyledWeatherData>{weatherData.feelslike}</StyledWeatherData> </span>
 
 							<span> Humidity: <StyledWeatherData>{weatherData.humidity}</StyledWeatherData> </span>
 							<span> Observation Time: <StyledWeatherData>{weatherData.observation_time}</StyledWeatherData> </span>
