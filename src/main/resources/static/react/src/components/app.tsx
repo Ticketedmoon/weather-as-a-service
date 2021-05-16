@@ -58,6 +58,8 @@ let WEATHER_DESCRIPTION_NOT_FOUND = "No Temperature Description Found";
 
 export const App = () => {
 
+	const [isLoading, setLoading] = useState<boolean>(false);
+
 	const [countries, setCountries] = useState<Country[]>([])
 	const [cities, setCities] = useState<City[]>([])
 	const [weatherData, setWeatherData] = useState<WeatherType>()
@@ -103,15 +105,17 @@ export const App = () => {
 	}
 
 	const setCountryAndGetCities = (country: string) => {
-		resetCityState();
 		setCountry(country);
+		setLoading(true)
 		axios.get("/api/cities", {
 			params: {
 				"country": country
 			}
 		}).then(res => {
 			setCities(res.data);
+			setLoading(false);
 		}).catch(() => {
+			setLoading(false);
 			toast.error('⚠ Something went wrong when getting city information for selected country', {
 				position: "top-right",
 				autoClose: 5000,
@@ -122,10 +126,6 @@ export const App = () => {
 				progress: undefined,
 			});
 		})
-	}
-
-	const resetCityState = () => {
-		setCities([]);
 	}
 
 	const isPropertySet = (property: string) => {
@@ -151,6 +151,7 @@ export const App = () => {
 						getOptionLabel={(option) => option}
 						onInputChange={(event, selectedCity: string) => setCity(selectedCity)}
 						style={{width: 300}}
+						loading={isLoading}
 						renderInput={(params) => <TextField {...params} label="City Select" variant="outlined"/>}
 					/>
 				) : undefined
