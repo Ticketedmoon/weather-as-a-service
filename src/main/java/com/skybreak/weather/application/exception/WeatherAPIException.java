@@ -7,6 +7,11 @@ public class WeatherAPIException extends RuntimeException {
 
     private final String message;
 
+    public WeatherAPIException(String message) {
+        super(message);
+        this.message = message;
+    }
+
     public WeatherAPIException(String message, Exception e) {
         super(message, e);
         this.message = message;
