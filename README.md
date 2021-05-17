@@ -34,12 +34,12 @@ I did not add authentication to the interface for this project.
 
 ### Instructions to run assignment locally
 
-**Curl**
-Get All Countries: `curl -X GET "http://weather-as-a-service-app.herokuapp.com/api/countries"`
-Get Cities By Country Name: `curl -X GET "http://weather-as-a-service-app.herokuapp.com/api/cities?country=canada"`
-Get Weather By City Name: `curl -X GET "http://weather-as-a-service-app.herokuapp.com/api/weather?city=Vancouver"`
+**Curl**  
+Get All Countries: `curl -X GET "http://weather-as-a-service-app.herokuapp.com/api/countries"`  
+Get Cities By Country Name: `curl -X GET "http://weather-as-a-service-app.herokuapp.com/api/cities?country=canada"`  
+Get Weather By City Name: `curl -X GET "http://weather-as-a-service-app.herokuapp.com/api/weather?city=Vancouver"`  
 
-**Local**
+**Local**  
 - Ensure you maven installed on your system.
 - You should then be able to clone the project from Github.
 - Go to the root directory of the project where the `pom.xml` is located and type `maven clean install`.
@@ -53,5 +53,5 @@ country/city API to integrate with for this project, for data quality and robust
 
 ### Other information about your submission that you feel it's important that we know if applicable.
 ### Your feedback on this technical challenge
-It was definitely a good task! I'm quite familiar with doing this type of work so 
+It was definitely a good task! I'm quite familiar with doing this type of work so  
 I tried to focus on some new skills I could pick up, IE Styled Components. 
