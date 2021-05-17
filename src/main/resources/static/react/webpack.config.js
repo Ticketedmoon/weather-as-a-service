@@ -21,7 +21,7 @@ module.exports = (mode) => {
             writeToDisk: true,
             proxy: {
                 '*': {
-                    target: "http://localhost:8080",
+                    target: `http://localhost:${process.env.PORT || 8080}`,
                     secure: false
                 }
             }
