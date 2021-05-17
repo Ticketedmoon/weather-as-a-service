@@ -26,7 +26,7 @@ otherwise! Sometimes you may notice if you select a certain country, that the ci
 on their end.
 
 ### Stretch goals attempted
-- Attempted building a simple UI, with React/Typescript/Webpack and node.
+- Created a simple UI, with React/Typescript/Webpack and node.
 - Deployed the application with the link in the readme.
 - Proxied a real weather API for my service (http://api.weatherstack.com, however this is limited per month on the free-tier).
 
