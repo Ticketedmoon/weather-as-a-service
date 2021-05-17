@@ -15,15 +15,19 @@ const StyledDropDownSubmitContainer = styled.div`
 	justify-content: center;
 	height: 20%;
 	align-items:center;
+	
+	@media (max-width: 1000px) {
+       flex-direction: column; 
+    }
 `;
 
 const StyledWeatherResultView = styled.div`
     margin: 0 auto;
-    width: 60%;
     background-color: #009684;
     align-items: center;
     color: white;
-    padding: 1em;
+    padding: 2em;
+    width: 85vw;
     font-family: calibri;
     box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
 `;
