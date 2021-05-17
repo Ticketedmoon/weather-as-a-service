@@ -23,7 +23,7 @@ N/A
 The API that I am using to get country and city information is a little finicky you may find if you try certain 
 countries/city combinations. I would have integrated with a better API for data quality and greater service reliability
 otherwise! Sometimes you may notice if you select a certain country, that the cities won't be found - this is just a data issue
-on their end.
+on their end - I have a red snackbar notification appear for when this comes up, but the vast majority of countries work.
 
 ### Stretch goals attempted
 - Created a simple UI, with React/Typescript/Webpack and node.
@@ -48,8 +48,8 @@ Get Weather By City Name: `curl -X GET "http://weather-as-a-service-app.herokuap
 `java -Dweather-api-access-key=YOUR_KEY_HERE -jar [app-name].jar`
 
 ### What did you not include in your solution that you want us to know about?
-I would have completed the authentication stretch goal using spring-security. Also, perhaps would have found a better 
-country/city API to integrate with for this project, for data quality and robustness.
+- I would have completed the authentication stretch goal using spring-security. 
+- Also, I would have found a better country/city API to integrate with for this project, for data quality and robustness.
 
 ### Other information about your submission that you feel it's important that we know if applicable.
 ### Your feedback on this technical challenge
