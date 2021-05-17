@@ -43,7 +43,7 @@ Get Weather By City Name: `curl -X GET "http://weather-as-a-service-app.herokuap
 - Ensure you maven installed on your system.
 - You should then be able to clone the project from Github.
 - Go to the root directory of the project where the `pom.xml` is located and type `maven clean install`.
-- You should then be able to `cd` into the generated `target/` folder.
+- You should then be able to `cd` into the generated `target/` folder and find the .jar file.
 - It is required that an API key from [http://api.weatherstack.com] is specified in the vm options of the jar execution, this will look like as follows:
 `java -Dweather-api-access-key=YOUR_KEY_HERE -jar [app-name].jar`
 
