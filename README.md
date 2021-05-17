@@ -1,36 +1,48 @@
 # Weather-As-A-Service
-A simple web application that allows the user to fetch the current weather for a city. This application also exports a public RESTful API for client-query.. 
+A simple web application that allows the user to fetch the current weather for a city. This application also exports a public RESTful API for client-query.
 
-## Notes
-*Please do not supply your name or email address in this document. We're doing our best to remain unbiased.*
+![Application Image](./src/main/resources/assets/application-ui.PNG)
 
 ### Date
-The date you're submitting this.
+17th of May, 2021
 
 ### Location of deployed application
-If applicable, please provide the url where we can find and interact with your running application.
+https://weather-as-a-service-app.herokuapp.com/
 
 ### Time spent
-How much time did you spend on the assignment? Normally, this is expressed in hours.
+Core Goal of developing a Rest API: ~1 hour  
+Finding real country/city/weather APIs to integrate with: ~1 hour  
+Build simple UI: ~2 hours  
+Deploying the application: ~2 hours (Springboot/React/Webpack project deployment on Heroku)
 
 ### Assumptions made
-Use this section to tell us about any assumptions that you made when creating your solution.
+N/A
 
 ### Shortcuts/Compromises made
-If applicable. Did you do something that you feel could have been done better in a real-world application? Please
-let us know.
+The API that I am using to get country and city information is a little finicky you may find out if you try certain 
+countries/city combinations. I would have integrated with a better API for data quality and greater service reliability
+otherwise! Sometimes you may notice if you select a certain country, that the cities won't be found - this is just a data issue
+on their end I believe.
 
 ### Stretch goals attempted
-If applicable, use this area to tell us what stretch goals you attempted. What went well? What do you wish you
-could have done better? If you didn't attempt any of the stretch goals, feel free to let us know why.
+- Attempted building a simple UI, with React/Typescript/Webpack and node.
+- Deployed the application with the link in the readme.
+- Proxied a real weather API for my service (http://api.weatherstack.com, however this is limited per month on the free-tier).
+
+I did not add authentication to the interface for this project.
 
 ### Instructions to run assignment locally
-If applicable, please provide us with the necessary instructions to run your solution.
+- Ensure you maven installed on your system.
+- You should then be able to clone the project from Github.
+- Go to the root directory of the project where the `pom.xml` is located and type `maven clean install`.
+- You should then be able to `cd` into the generated `target/` folder and run `java -jar [app-name].jar`
+- **Note**: It is required that an API key is specified in the vm options of the jar execution, this will look like as follows:
+`java -Dweather-api-access-key=YOUR_KEY_HERE -jar [app-name].jar`
 
 ### What did you not include in your solution that you want us to know about?
-Were you short on time and not able to include something that you want us to know
-about? Please list it here so that we know that you considered it.
+I would have completed the authentication stretch goal using spring-security. Also, perhaps would have found a better 
+country/city API to integrate with for this project, for data quality and robustness.
 
 ### Other information about your submission that you feel it's important that we know if applicable.
 ### Your feedback on this technical challenge
-Have feedback for how we could make this assignment better? Please let us know
+It was a good task, definitely applicable to the real world!
