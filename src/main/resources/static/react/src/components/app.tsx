@@ -7,6 +7,7 @@ import {Button, TextField} from "@material-ui/core";
 import styled from "styled-components";
 import {WeatherType} from "../types/weather.type";
 import {City} from "../types/city.type";
+import {StyledWeatherGrid} from "./atoms/Grid/StyledWeatherGrid";
 
 const StyledDropDownSubmitContainer = styled.div`
 	display: flex;
@@ -27,14 +28,6 @@ const StyledWeatherResultView = styled.div`
     box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
 `;
 
-const StyledGridView = styled.div`
-	display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 1em;
-    padding: 1em;
-    justify-content: center;
-`;
-
 const StyledResultViewTitle = styled.span`
 	font-size: 2.5em;
     color: #f9e16c;
@@ -49,16 +42,12 @@ const StyledPageTitle = styled(StyledResultViewTitle)`
     padding-top: 1em;
 `;
 
-const StyledWeatherData = styled.span`
-    color: #f9e16c;
-	font-family: 'Itim', cursive;
-`;
-
 const StyledButtonContainer = styled.div`
 	text-align: center;
+    padding-bottom: 3em;
 `;
 
-let WEATHER_DESCRIPTION_NOT_FOUND = "No Temperature Description Found";
+const WEATHER_DESCRIPTION_NOT_FOUND: string = "No Temperature Description Found";
 
 export const App = () => {
 
@@ -163,7 +152,7 @@ export const App = () => {
 			</StyledDropDownSubmitContainer>
 			<StyledButtonContainer>
 				{isPropertySet(country) && isPropertySet(city) ? (
-					<Button variant={"outlined"}
+					<Button variant={"contained"}
 							color={"primary"}
 							onClick={() => getWeatherByCity(city)}> Check weather </Button>
 				) : undefined
@@ -176,25 +165,7 @@ export const App = () => {
 							<StyledResultViewTitle> {weatherData.weather_descriptions[0]} </StyledResultViewTitle>
 							: WEATHER_DESCRIPTION_NOT_FOUND
 						}
-						<StyledGridView>
-							<span> Weather Icons: [<StyledWeatherData>{weatherData.weather_icons.join(", ")}</StyledWeatherData>] </span>
-							<span> Weather Descriptions: [<StyledWeatherData>{weatherData.weather_descriptions.join(", ")}</StyledWeatherData>] </span>
-
-							<span> Is currently Daytime: <StyledWeatherData>{weatherData.is_day}</StyledWeatherData> </span>
-							<span> Visibility: <StyledWeatherData>{weatherData.visibility}</StyledWeatherData> </span>
-							<span> Cloud Cover: <StyledWeatherData>{weatherData.cloudcover}</StyledWeatherData> </span>
-
-							<span> Humidity: <StyledWeatherData>{weatherData.humidity}</StyledWeatherData> </span>
-							<span> Observation Time: <StyledWeatherData>{weatherData.observation_time}</StyledWeatherData> </span>
-							<span> Precipitation (Rainfall): <StyledWeatherData>{weatherData.precip}</StyledWeatherData> </span>
-							<span> Pressure: <StyledWeatherData>{weatherData.pressure}</StyledWeatherData> </span>
-							<span> Temperature: <StyledWeatherData>{weatherData.temperature}</StyledWeatherData> </span>
-
-							<span> UV Index: <StyledWeatherData>{weatherData.uv_index}</StyledWeatherData> </span>
-							<span> Wind Speed: <StyledWeatherData>{weatherData.wind_speed}</StyledWeatherData> </span>
-							<span> Wind Degree: <StyledWeatherData>{weatherData.wind_degree}</StyledWeatherData> </span>
-							<span> Wind Direction (N/S/E/W): <StyledWeatherData>{weatherData.wind_dir}</StyledWeatherData> </span>
-						</StyledGridView>
+						<StyledWeatherGrid {...weatherData}/>
 					</StyledWeatherResultView>
 				) : null
 			}

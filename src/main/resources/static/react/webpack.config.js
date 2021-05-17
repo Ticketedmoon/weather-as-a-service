@@ -13,16 +13,17 @@ module.exports = (mode) => {
         devtool: (mode === "development" || mode === "dev") ? 'source-map' : false,
         devServer: {
             host: 'localhost',
-            publicPath: 'http://localhost:3000/dist',
+            publicPath: `http://localhost:3000/dist`,
             port: 3000,
             compress: true,
             contentBase: path.join(__dirname, "dist"),
             watchContentBase: true,
             writeToDisk: true,
             proxy: {
-                '*': {
-                    target: `http://localhost:${process.env.PORT || 8080}`,
-                    secure: false
+                '/api/**': {
+                    target: `http://localhost:${process.env.PORT ||"8080"}`,
+                    secure: false,
+                    changeOrigin: true
                 }
             }
         },
