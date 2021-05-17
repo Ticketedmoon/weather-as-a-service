@@ -142,7 +142,7 @@ export const App = () => {
 			<StyledDropDownSubmitContainer>
 				<Autocomplete
 					id="countries-dropdown"
-					options={countries.map(country => country.name)}
+					options={countries.map(countryObj => countryObj.country)}
 					getOptionLabel={(option) => option}
 					onInputChange={(event, selectedCountry: string) => setCountryAndGetCities(selectedCountry)}
 					style={{width: 300}}

@@ -2,7 +2,7 @@ package com.skybreak.weather.application.controller;
 
 import com.skybreak.weather.application.service.WeatherAPIService;
 import com.skybreak.weather.domain.model.CityListDTO.City;
-import com.skybreak.weather.domain.model.CountryDTO;
+import com.skybreak.weather.domain.model.CountryListDTO.Country;
 import com.skybreak.weather.domain.model.WeatherDTO;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +24,7 @@ public class WeatherAPIController {
     }
 
     @GetMapping("/countries")
-    public List<CountryDTO> getCountries() {
+    public List<Country> getCountries() {
         return weatherAPIService.getCountries();
     }
 
