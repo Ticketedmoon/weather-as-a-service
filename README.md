@@ -12,7 +12,7 @@ https://weather-as-a-service-app.herokuapp.com/
 ### Time spent
 Core Goal of developing a Rest API: ~1 hour  
 Finding real country/city/weather APIs to integrate with: ~1 hour  
-Build simple UI: ~2 hours  
+Build simple UI: ~2-3 hours  
 Deploying the application: ~2 hours (Springboot/React/Webpack project deployment on Heroku) - This took me some time 
 to get the configuration correct.
 
