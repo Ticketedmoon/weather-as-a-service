@@ -52,7 +52,8 @@ Get Weather By City Name: `curl -X GET "http://weather-as-a-service-app.herokuap
 
 ### What did you not include in your solution that you want us to know about?
 - I would have completed the authentication stretch goal using spring-security. 
-- Also, I would have found a better country/city API to integrate with for this project, for data quality and robustness.
+- I would have found a better country/city API to integrate with for this project, for data quality and robustness.
+- Finally, I would have written some unit/integration tests on the java side, and jest front-end tests.
 
 ### Other information about your submission that you feel it's important that we know if applicable.
 ### Your feedback on this technical challenge
