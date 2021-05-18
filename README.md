@@ -25,6 +25,8 @@ countries/city combinations. I would have integrated with a better API for data 
 otherwise! Sometimes you may notice if you select a certain country, that the cities won't be found - this is just a data issue
 on their end - I have a red snackbar notification appear for when this comes up, but the vast majority of countries work.
 
+Additionally, I did not include any tests for this project.
+
 ### Stretch goals attempted
 - Created a simple UI, with React/Typescript/Webpack and node.
 - Deployed the application with the link in the readme.
