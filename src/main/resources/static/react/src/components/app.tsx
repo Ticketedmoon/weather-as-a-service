@@ -51,7 +51,7 @@ const StyledButtonContainer = styled.div`
     padding-bottom: 3em;
 `;
 
-const WEATHER_DESCRIPTION_NOT_FOUND: string = "No Temperature Description Found";
+const WEATHER_DESCRIPTION_NOT_FOUND: string = "No Weather Description Found";
 
 export const App = () => {
 
