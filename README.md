@@ -34,10 +34,10 @@ I did not add authentication to the interface for this project.
 ### Instructions to run assignment locally
 - Ensure you maven installed on your system.
 - You should then be able to clone the project from Github.
-- Go to the root directory of the project where the `pom.xml` is located and type `maven clean install`.
+- Go to the root directory of the project where the `pom.xml` is located and type `maven clean package`.
 - You should then be able to `cd` into the generated `target/` folder and run `java -jar [app-name].jar`
 - **Note**: It is required that an API key is specified in the vm options of the jar execution, this will look like as follows:
-`java -Dweather-api-access-key=YOUR_KEY_HERE -jar [app-name].jar`
+`java -Dweather-api-access-key={YOUR_KEY_HERE} -jar [app-name].jar`
 
 ### What did you not include in your solution that you want us to know about?
 I would have completed the authentication stretch goal using spring-security. Also, perhaps would have found a better 
